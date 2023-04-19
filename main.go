@@ -11,10 +11,19 @@ func test(c *gin.Context) {
 
 }
 
+func myName(c *gin.Context) {
+	name := "Jonas"
+	city := "Gothenburg"
+
+	c.JSON(http.StatusOK, name+", "+city)
+}
+
 func main() {
 
 	router := gin.Default()
 
 	router.GET("/api/test", test)
+	router.GET("/api/jonas", myName)
+
 	router.Run(":8080")
 }
