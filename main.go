@@ -26,7 +26,7 @@ func main() {
 	router.GET("/api/test", test)
 	router.GET("/api/jonas", myName)
 
-	//data.SeedData()
+	data.SeedData()
 
 	router.Run(":8080")
 }
