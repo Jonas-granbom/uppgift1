@@ -19,6 +19,6 @@ version: 0.2
 phases:
   build:
     commands:
-      - docker build -t git.systementor.se/jonas.granbom/uppgift .
+      - docker build -t git.systementor.se/jonas.granbom/uppgift1 .
       - docker login -u jonas.granbom -p yacloud1 https://git.systementor.se
-      - docker push git.systementor.se/jonas.granbom/uppgift
+      - docker push git.systementor.se/jonas.granbom/uppgift1

@@ -1,11 +1,10 @@
-module github.com/jonas-granbom/uppgift
+module github.com/jonas-granbom/uppgift1
 
 go 1.20
 
 require (
 	github.com/gin-gonic/gin v1.9.0
 	github.com/glebarez/sqlite v1.8.0
-	github.com/jonas-granbom/uppgift1 v0.0.0-20230422113213-6a75b14c98f3
 	gorm.io/gorm v1.25.0
 )
 
