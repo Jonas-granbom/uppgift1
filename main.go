@@ -18,6 +18,10 @@ func myName(c *gin.Context) {
 
 	c.JSON(http.StatusOK, name+", "+city)
 }
+func seed(c *gin.Context) {
+	data.SeedData()
+	c.JSON(http.StatusOK, "db filled with random data")
+}
 
 func main() {
 	data.ConnectDatabase()
@@ -25,8 +29,7 @@ func main() {
 
 	router.GET("/api/test", test)
 	router.GET("/api/jonas", myName)
-
-	data.SeedData()
+	router.GET("/api/seed", seed)
 
 	router.Run(":8080")
 }
